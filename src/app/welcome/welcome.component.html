@@ -41,4 +41,19 @@
   </p>
 </section>
 
-<app-offer-preview />
+
+
+<!-- Defferable Content -->
+
+@defer (
+  on interaction; 
+  prefetch on hover
+) {
+  <app-offer-preview />
+}@placeholder {
+  <div class="placeholder">
+    <p>We might have some exclusive offers for you...</p>
+    <p>Click here to check them out!</p>
+    <button class="offer-button">See Offers</button>
+  </div>
+}
